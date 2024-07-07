@@ -26,7 +26,7 @@ body{
         min-height: 800px;
     }
     #a{
-        background-color: greenyellow;
+        background-color: rgb(197, 29, 29);
         min-width: 5px;
         grid-area: a;
         margin: 5px;
