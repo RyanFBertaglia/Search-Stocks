@@ -1,64 +1,42 @@
-body{
-    margin: 0px;
-    padding: opx;
-    list-style: none;
-    font-size: 1.2em;
-    text-decoration: none;
-    }
-    a{
-        text-decoration: none;
-        font-size: 20px;
-    }
-    h1{
-        font-size: 40px;
-    }
-    .container{
-        background-color: rgb(255, 251, 251);
-        width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-areas: 
-        "a b c"
-        "a d e";
-        grid-template-columns: 20% 35% 45% ;
-        text-align: center;
-        padding: auto;
-        min-height: 800px;
-    }
-    #a{
-        background-color: rgb(0, 201, 29);
-        min-width: 5px;
-        grid-area: a;
-        margin: 5px;
-        text-decoration: none;
-        position:fixed;
-        width: 19%;
-        border: 25px;
-        height:665px;
-        text-align: center;
-        top:0;
-    }
-    #b{
-        background-color: brown;
-        min-width: 5px;
-        grid-area: b;
-        margin: 5px;
-    }
-    #c{
-        background-color: grey;
-        min-width: 5px;
-        grid-area: c; 
-        margin: 5px;
-    }
-    #d{
-        background-color: royalblue;
-        min-width: 5px;
-        grid-area: d;
-        margin: 5px;
-    }
-    #e{
-        background-color: indigo;
-        min-width: 5px;
-        grid-area: e;
-        margin: 5px;
-    }
+#loading_container{
+    display: none; 
+    width: 200px;
+    margin-top: 1%;
+    margin-left: 45%;
+    margin-right: auto;
+  }
+  
+  #company_container{
+    margin-top: 5%;
+    margin-left: 32%;
+    margin-right: auto;
+  }
+  
+  #chartContainer{
+    height: 300px; 
+    width: 70%; 
+    margin-top: 5%;
+    margin-left: 13%;
+    margin-right: auto;
+  }
+  
+  #table_container{
+    margin-left: 30px;
+    margin-top: 5%;
+    width: 100%;
+    margin-right: 20px;
+  }
+  
+  #para{
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    margin-bottom: 1%;
+  }
+  
+  #download_data{
+    display: none;
+    margin-top: 20px;
+    margin-left: 42%;
+    margin-right: auto;
+  }
