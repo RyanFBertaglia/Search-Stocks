@@ -22,12 +22,14 @@ document.getElementById("get_data").addEventListener("click", getData);
                 });}
       console.log(processedData[0]);
       inicTabela(processedData);
-      for(let i=0; i<=14; i++){
-        getElementById
-      }
+    }
     function inicTabela(processedData){
       let containe = document.getElementById('table_container');
       for(let i=0; i<=14; i++){
-        const containe = document.createElement('<tr> <td>${processed_container[i].abertura}</td> </tr>');
+        const row = document.createElement('tr');
+        const cell = document.createElement('td');
+        cell.content = processedData[i].abertura;  
       };
-    }}
+      let cantaine = document.getElementById('table_container');
+        rows.forEach(row => containe.appendChild(row));
+    }
