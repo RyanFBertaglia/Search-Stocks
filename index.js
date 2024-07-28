@@ -1,12 +1,10 @@
 // API Key for Alpha Vantage
 var api = "5FBPJXV8F137NKZI"; // get your 
-var columns = ["Date", "Open", "High", "Low", "Close", "Adjusted Close", "Volume"];
-
 document.getElementById("get_data").addEventListener("click", getData);
 
   async function getData() {
-    var url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=5FBPJXV8F137NKZI`; // Construct the URL
-  
+    var url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=${api}`;
+      // Construct the UR
       // Fetch data from the API
       let response = await fetch(url);
       var data = await response.json();
@@ -25,11 +23,28 @@ document.getElementById("get_data").addEventListener("click", getData);
     }
     function inicTabela(processedData){
       let containe = document.getElementById('table_container');
-      for(let i=0; i<=14; i++){
-        const row = document.createElement('tr');
-        const cell = document.createElement('td');
-        cell.content = processedData[i].abertura;  
-      };
-      let cantaine = document.getElementById('table_container');
-        rows.forEach(row => containe.appendChild(row));
-    }
+      processedData.forEach(item => {
+          const row = document.createElement('tr');
+
+          const dataCell = document.createElement('td');
+          dataCell.textContent = item.data;
+          row.appendChild(dataCell);
+
+          const aberturaCell = document.createElement('td');
+          aberturaCell.textContent = item.abertura;
+          row.appendChild(aberturaCell);
+
+          const altaCell = document.createElement('td');
+          altaCell.textContent = item.alta;
+          row.appendChild(altaCell);
+
+          const baixaCell = document.createElement('td');
+          baixaCell.textContent = item.baixa;
+          row.appendChild(baixaCell);
+
+          const fechamentoCell = document.createElement('td');
+          fechamentoCell.textContent = item.fechamento;
+          row.appendChild(fechamentoCell);
+          containe.appendChild(row);
+      });}
+    

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="container">
   <div id="company_container" style="margin: 20px;">
     <select id="companies" class="btn btn-light" name="companies">
       <option value="AAPL">Apple Inc (AAPL)</option>
@@ -15,9 +16,36 @@
     </select>
     <button id="get_data" class="btn btn-primary" style="margin-left: 5%;">Get Data</button>
   </div>
-  <content id="info"></content>
-  <div id="table_container">
+<div id="caixainfer">
+ <div class="tabtitulo">
+    <table id="titulo"> 
+    <tr>
+      <th>
+        <p>Data</p>
+      </th>
+      <th>
+        <p>Abertura</p>
+      </th>
+      <th>
+        <p>Alta</p>
+      </th>
+      <th>
+        <p>Baixa</p>
+      </th>
+      <th>
+        <p>Fechamento</p>
+      </th>
+    </tr>
+  </table>
   </div>
+  <div id="table_container"></div>
+
+</div>
+</div>
+<div id="ga"></div>
+<div id="gb"></div>
+<div id="gc"></div>
+<div id="gd"></div>
   <script src="index.js"></script>
 </body>
 </html>

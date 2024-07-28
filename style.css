@@ -1,27 +1,92 @@
-    #company_container{
-    margin-top: 5%;
-    margin-left: 32%;
-    margin-right: auto;
+body {
+  font-family: gotham, arial, helvetica, sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  max-width: 100vw; /* Não permite que o conteúdo exceda a largura da viewport */
+  overflow-x: hidden; /* Remove a rolagem horizontal */
+}
+
+table {
+  width: 100%;
+  text-align:center;
+  table-layout:fixed;
+  align-items: center; /* Ajuste adicional para tabelas em telas menores */
+}
+
+th, td {
+  border: 1px solid black;
+  background-color: cadetblue;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#tabtitulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  grid-template-areas: 
+      "A"
+      "B";
+  /* Margem interna horizontal */
+}
+
+#company_container {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  grid-area: A;
+  width: 100%; /* Ajusta para caber na tela */
+}
+
+#caixainfer {
+  display:table;
+  grid-area: B;
+  width: 100%; /* Ajusta para caber na tela */
+  height: max-content;
+  justify-content: center;
+}
+
+#chartContainer, #table_container {
+  width: 100%; /* Ajusta para caber na tela */
+  margin-top: 5%;
+}
+
+#table_container {
+  overflow-x: auto; /* Permite rolagem horizontal caso a tabela seja muito larga */
+}
+
+@media (max-width: 768px) {
+  th, td {
+      padding: 4px; /* Reduz o espaço interno em telas menores */
+      font-size: 14px; /* Reduz o tamanho da fonte em telas menores */
   }
-  
-  #chartContainer{
-    height: 300px; 
-    width: 70%; 
-    margin-top: 5%;
-    margin-left: 13%;
-    margin-right: auto;
+
+  #caixainfer{
+    padding-left: 0;
   }
-  
-  #table_container{
-    margin-left: 30px;
-    margin-top: 5%;
-    width: 100%;
-    margin-right: 20px;
+  #table_container {
+      width: 100%;
+      padding: 0;
   }
-  
-  #para{
-    font-weight: bold;
-    font-size: large;
-    text-align: center;
-    margin-bottom: 1%;
+
+  table {
+      width: 100%;
+      font-size: 14px;
+      text-align:center;
+      table-layout:fixed;
+       /* Ajuste adicional para tabelas em telas menores */
   }
+}
