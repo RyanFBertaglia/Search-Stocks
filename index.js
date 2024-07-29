@@ -1,11 +1,10 @@
-// API Key for Alpha Vantage
-var api = "5FBPJXV8F137NKZI"; // get your 
 document.getElementById("get_data").addEventListener("click", getData);
 
   async function getData() {
-    var url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=${api}`;
-      // Construct the UR
-      // Fetch data from the API
+    let company = document.getElementById('companies').value;
+    let api = document.getElementById('apilista').value;
+    var url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${company}&apikey=${api}`;
+
       let response = await fetch(url);
       var data = await response.json();
       console.log(data);
@@ -23,6 +22,8 @@ document.getElementById("get_data").addEventListener("click", getData);
     }
     function inicTabela(processedData){
       let containe = document.getElementById('table_container');
+      let mostrar = document.getElementById('caixainfer');
+      mostrar.style.display = 'table';
       processedData.forEach(item => {
           const row = document.createElement('tr');
 

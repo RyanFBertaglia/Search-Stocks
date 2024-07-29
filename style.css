@@ -3,90 +3,62 @@ body {
   font-size: 18px;
   margin: 0;
   padding: 0;
-  max-width: 100vw; /* Não permite que o conteúdo exceda a largura da viewport */
-  overflow-x: hidden; /* Remove a rolagem horizontal */
+  background-color: #F6F8FF;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 table {
   width: 100%;
   text-align:center;
   table-layout:fixed;
-  align-items: center; /* Ajuste adicional para tabelas em telas menores */
+  align-items: center;
+  
+}
+#get_data{
+  width: 150px;
+  height: 80px;
 }
 
-th, td {
-  border: 1px solid black;
-  background-color: cadetblue;
+#apilista{
+  margin-left: 5%;
   width: 100px;
-  height: 40px;
+  height: 100px;
+}
+
+th {
+  border: 2px solid black;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #47A8A4;
+}
+
+td{
+  border: 1px solid black;
   text-align: center;
   vertical-align: middle;
 }
-
-#tabtitulo {
+#company_container {
+  margin-top: 7%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 20px;
   width: 100%;
 }
 
-#container {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  justify-content: center;
-  grid-template-areas: 
-      "A"
-      "B";
-  /* Margem interna horizontal */
-}
-
-#company_container {
-  margin-top: 5%;
-  display: flex;
-  justify-content: center;
-  grid-area: A;
-  width: 100%; /* Ajusta para caber na tela */
-}
-
 #caixainfer {
-  display:table;
-  grid-area: B;
-  width: 100%; /* Ajusta para caber na tela */
+  padding-left: 15%;
+  width: 91%;
   height: max-content;
   justify-content: center;
+  table-layout:auto;
+  display:none;
 }
 
-#chartContainer, #table_container {
-  width: 100%; /* Ajusta para caber na tela */
-  margin-top: 5%;
-}
-
-#table_container {
-  overflow-x: auto; /* Permite rolagem horizontal caso a tabela seja muito larga */
-}
-
-@media (max-width: 768px) {
-  th, td {
-      padding: 4px; /* Reduz o espaço interno em telas menores */
-      font-size: 14px; /* Reduz o tamanho da fonte em telas menores */
-  }
-
-  #caixainfer{
-    padding-left: 0;
-  }
-  #table_container {
-      width: 100%;
-      padding: 0;
-  }
-
-  table {
-      width: 100%;
-      font-size: 14px;
-      text-align:center;
-      table-layout:fixed;
-       /* Ajuste adicional para tabelas em telas menores */
-  }
+#table_container{
+  display:table;
+  width: 100%;
+  text-align:center;
+  table-layout:fixed;
+  align-items: center;
+  background-color: #B9D5D3;
 }

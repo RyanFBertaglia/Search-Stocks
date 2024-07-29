@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stock Data</title>
+  <title>Consulta</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="imagex/png" href="search.svg">
 </head>
 <body>
   <div id="container">
+  
   <div id="company_container" style="margin: 20px;">
+    <div id="api_container" >
+      <select id="apilista" class="btn btn-light" name="apilista">
+        <option value="5FBPJXV8F137NKZI">API1</option>
+        <option value="N9ITS77RNAAETPUM ">API2</option>
+        <option value="FQHDT23FX23CB3W5 ">API3</option>
+      </select>
+    </div>
     <select id="companies" class="btn btn-light" name="companies">
       <option value="AAPL">Apple Inc (AAPL)</option>
+      <option value="BBSE3">BB Seguridade (BBSE3)</option>
+      <option value="BBAS3">Banco do Brasil (BBAS3)</option>
+      <option value="VALE3">VALE (VALE3)</option>
+      <option value="PETR4">Petrobrás (PETR4)</option>
       <option value="MSFT">Microsoft Corp (MSFT)</option>
       <option value="IBM">International Business Machine (IBM)</option>
     </select>
-    <button id="get_data" class="btn btn-primary" style="margin-left: 5%;">Get Data</button>
+    <button id="get_data" class="btn btn-primary" style="margin-left: 5%; height: 100px;">Pegar Dados</button>
   </div>
 <div id="caixainfer">
- <div class="tabtitulo">
     <table id="titulo"> 
     <tr>
       <th>
@@ -37,15 +49,10 @@
       </th>
     </tr>
   </table>
-  </div>
+  
   <div id="table_container"></div>
-
 </div>
 </div>
-<div id="ga"></div>
-<div id="gb"></div>
-<div id="gc"></div>
-<div id="gd"></div>
   <script src="index.js"></script>
 </body>
 </html>
