@@ -2,12 +2,11 @@ document.getElementById("get_data").addEventListener("click", getData);
 
   async function getData() {
     let company = document.getElementById('companies').value;
-    let api = document.getElementById('apilista').value;
+    let api = '5FBPJXV8F137NKZI';
     var url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${company}&apikey=${api}`;
 
       let response = await fetch(url);
       var data = await response.json();
-      console.log(data);
       const processedData = [];
             for (var key in data['Time Series (Daily)']) {
                 processedData.push({
@@ -17,7 +16,6 @@ document.getElementById("get_data").addEventListener("click", getData);
                     baixa: parseFloat(data['Time Series (Daily)'][key]['3. low']),
                     fechamento: parseFloat(data['Time Series (Daily)'][key]['4. close'])
                 });}
-      console.log(processedData[0]);
       inicTabela(processedData);
     }
     function inicTabela(processedData){
