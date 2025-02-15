@@ -1,1 +1,1 @@
-This is a program that show stocks of many companys using HTML, CSS and JavaScript to create a table with some informatios about the stock
+# This is a program that show informations about stocks of many companys using an API, all accessed by JavaScript after the response the application creates a table with the data about the stock in question
